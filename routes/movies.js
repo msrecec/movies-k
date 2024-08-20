@@ -3,13 +3,28 @@ var router = express.Router();
 var movies = require('../data/data')
 
 /* GET movies listing. */
+router.get('/ui', function (req, res, next) {
+    res.render('movies')
+});
+/* GET movies listing. */
+router.get('/ui/movies-add', function (req, res, next) {
+    res.render('add-movie')
+});
+/* GET movies listing. */
 router.get('/', function (req, res, next) {
     res.json(movies)
 });
 
 /* POST movies create. */
 router.post('/', function (req, res, next) {
-    movies.push(req.body)
+    let i = 1;
+    for (let movie of movies) {
+        if (movie.id >= i) {
+            i = movie.id
+        }
+    }
+    const newMovie = {id: (i + 1), name: req.body.name, author: req.body.author}
+    movies.push(newMovie)
     res.json(movies)
 });
 

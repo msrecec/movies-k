@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add movie</title>
+    <!--    <link rel="stylesheet" href="/styles/style.css">-->
+    <!--    <link rel="stylesheet" href="/styles/product.css">-->
+    <!--    <link rel="stylesheet" href="/styles/badge.css">-->
+    <!--    <link rel="stylesheet" href="/styles/product-cart.css">-->
+    <!--    <link rel="stylesheet" href="/styles/hero-image.css">-->
+        <link rel="stylesheet" href="/styles/flex.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-element">
+        <p>Movie title</p>
+        <input type="text" id="movie-title">
+    </div>
+    <div class="flex-element">
+        <p>Movie director</p>
+        <input type="text" id="movie-director">
+    </div>
+    <div class="flex-element">
+        <button onclick="addMovie()" type="button">Add movie</button>
+    </div>
+    <div class="flex-element">
+        <a href="/movies/ui" id="movies-back">
+            <button class="nav-btn">Movies List</button>
+        </a>
+    </div>
+</div>
+
+<script type="module" src="/scripts/add-movie.js"></script>
+</body>
+</html>
